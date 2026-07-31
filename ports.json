@@ -1,7 +1,7 @@
 {
   "$schema": "project-ports/v1",
   "app": "xenodroid",
-  "updated": "2026-07-30",
+  "updated": "2026-07-31",
   "centralRegistry": "The Scriptorium/hub/config/!cursor-global-project-dev-port-registry.json",
   "blocks": {
     "frontend": { "start": 5060, "end": 5069 }
@@ -11,7 +11,7 @@
       "block": "frontend",
       "port": 5060,
       "url": "http://127.0.0.1:5060",
-      "source": "XenoDroid/package.json"
+      "source": "XenoDroid/dev/website/local repo/package.json"
     }
   }
 }

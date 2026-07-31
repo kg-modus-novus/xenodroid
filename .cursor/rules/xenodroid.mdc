@@ -5,12 +5,14 @@ alwaysApply: true
 
 # XenoDroid
 
-- Project root: `C:/Augen Studios Dropbox/Ken Greenwood/XenoDroid`
+- Umbrella project root: `C:/Augen Studios Dropbox/Ken Greenwood/XenoDroid`
+- Website app root and canonical Git repository: `C:/Augen Studios Dropbox/Ken Greenwood/XenoDroid/dev/website/local repo`
+- Website ports file: `C:/Augen Studios Dropbox/Ken Greenwood/XenoDroid/dev/website/local repo/ports.json`
 - App id: `xenodroid`
-- Canonical Git repository: this folder
-- Ports: `ports.json` frontend 5060–5069; local URL http://127.0.0.1:5060
+- Ports: frontend `5060-5069`; local URL `http://127.0.0.1:5060`
 - Stack: Astro static marketing site for https://xenodroid.ai
-- After non-trivial work: `npm run build` and `npm run harness:verify`
-- Never invent production URLs for ClaimsXen or LoveYou360
-- Never revert unrelated dirty changes
-- Keep brand-first hero and graphite/copper visual direction
+- `docswamp/`, `images/`, and `XenoDroid.code-workspace` belong at the umbrella root and are outside this Git repository.
+- After non-trivial work, run `npm run build` and `npm run harness:verify` from the website app root.
+- Never invent production URLs for ClaimsXen or LoveYou360.
+- Never revert unrelated dirty changes.
+- Keep brand-first hero and graphite/copper visual direction.

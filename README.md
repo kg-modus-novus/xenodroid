@@ -10,12 +10,15 @@ XenoDroid builds a curated portfolio of customer-facing products at the frontier
 |---|---|
 | DecisionPro | Legislative / Medicaid decision support |
 | EndPend | Medicaid-pending command center |
-| ClassLock | K–12 classroom access control |
+| ClassLock | K-12 classroom access control |
 | CareSpend | Residential care resident spending |
 | ClaimsXen | SNF claims orchestration |
 | LoveYou360 | Private family presence |
 
 ## Paths
+
+This directory is the website app root and canonical Git repository:
+`XenoDroid/dev/website/local repo`.
 
 | Path | Owns |
 |---|---|
@@ -23,15 +26,17 @@ XenoDroid builds a curated portfolio of customer-facing products at the frontier
 | `public/` | Static assets (hero, favicons) |
 | `docs/` | Deploy / DNS notes |
 | `scripts/` | GoDaddy DNS helper |
-| `docswamp/` | Working notes / spreadsheets |
 | `ports.json` | Local reserved ports |
+
+The umbrella project root is `XenoDroid`. Its `docswamp/`, `images/`, and `XenoDroid.code-workspace` remain outside this repository.
 
 ## Scriptorium
 
 - **App id:** `xenodroid`
 - **Aliases:** XenoDroid, xenodroid.ai
-- **Canonical Git repository:** `XenoDroid` (this folder)
-- **Ports:** frontend `5060–5069` → http://127.0.0.1:5060
+- **Project root:** `XenoDroid`
+- **Website app root / Git repository:** `XenoDroid/dev/website/local repo`
+- **Ports:** frontend `5060-5069` → http://127.0.0.1:5060
 
 ## Local development
 
@@ -49,4 +54,4 @@ npm run harness:verify
 
 ## Deploy
 
-Marketing site deploys to Vercel (team `modus-novus`). Custom domain `xenodroid.ai` is DNS’d at GoDaddy. See [docs/DNS.md](docs/DNS.md).
+Marketing site deploys to Vercel (team `modus-novus`). Custom domain `xenodroid.ai` is DNS'd at GoDaddy. See [docs/DNS.md](docs/DNS.md).

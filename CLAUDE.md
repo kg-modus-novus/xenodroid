@@ -1,3 +1,3 @@
 # XenoDroid
 
-See [AGENTS.md](./AGENTS.md) for project operating guidance.
+Read and follow [AGENTS.md](./AGENTS.md) for repository boundaries, paths, conventions, and verification.
