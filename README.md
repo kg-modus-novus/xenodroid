@@ -12,7 +12,7 @@ XenoDroid builds a curated portfolio of customer-facing products at the frontier
 | EndPend | Medicaid-pending command center |
 | ClassLock | K–12 classroom access control |
 | CareSpend | Residential care resident spending |
-| ClaimXen | SNF claims orchestration |
+| ClaimsXen | SNF claims orchestration |
 | LoveYou360 | Private family presence |
 
 ## Paths
