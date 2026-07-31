@@ -1,0 +1,16 @@
+---
+description: XenoDroid studio site conventions
+alwaysApply: true
+---
+
+# XenoDroid
+
+- Project root: `C:/Augen Studios Dropbox/Ken Greenwood/XenoDroid`
+- App id: `xenodroid`
+- Canonical Git repository: this folder
+- Ports: `ports.json` frontend 5060–5069; local URL http://127.0.0.1:5060
+- Stack: Astro static marketing site for https://xenodroid.ai
+- After non-trivial work: `npm run build` and `npm run harness:verify`
+- Never invent production URLs for ClaimXen or LoveYou360
+- Never revert unrelated dirty changes
+- Keep brand-first hero and graphite/copper visual direction

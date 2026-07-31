@@ -1,0 +1,222 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const CONTACT = "mailto:hello@xenodroid.ai";
+
+const products = [
+  {
+    name: "DecisionPro",
+    blurb:
+      "Legislative modeling and decision support that helps Medicaid leaders and staff examine cost, access, outcomes, and policy options together — evidence rooms that sharpen human judgment instead of replacing it.",
+    meta: "Public decision support",
+    href: "https://decisionpro.io",
+    linkLabel: "DecisionPro.io",
+  },
+  {
+    name: "EndPend",
+    blurb:
+      "A Medicaid-pending command center where providers and state-side teams share one case truth — deadlines, documents, and dollars at risk — so applications keep moving and people get covered.",
+    meta: "Care access operations",
+    href: "https://endpend.com",
+    linkLabel: "endpend.com",
+  },
+  {
+    name: "ClassLock",
+    blurb:
+      "Schedule-aware classroom access control for K–12 schools. Instructional spaces stay locked by default during class, while authorized people get timed entry — protecting students by helping staff protect each other.",
+    meta: "School safety",
+    href: "https://getclasslock.com",
+    linkLabel: "getclasslock.com",
+  },
+  {
+    name: "CareSpend",
+    blurb:
+      "Resident spending that families, staff, and auditors can trust. Wallets, approvals, receipts, and virtual cards in one auditable system — so caregivers and loved ones can steward every dollar with clarity.",
+    meta: "Residential care finance",
+    href: "https://app.getcarespend.com",
+    linkLabel: "getcarespend.com",
+  },
+  {
+    name: "ClaimXen",
+    blurb:
+      "Claims orchestration for skilled nursing teams — Triple Check, rebills, and denial recovery layered on the systems they already use, so billing, MDS, and operations can close clean claims together.",
+    meta: "Revenue cycle",
+    href: null,
+    linkLabel: null,
+  },
+  {
+    name: "LoveYou360",
+    blurb:
+      "A private family presence app: a child sends a gentle signal, and a parent or trusted adult answers with voice, video, or a Capsule. Reassurance when it matters — presence, not surveillance.",
+    meta: "Family connection",
+    href: null,
+    linkLabel: null,
+  },
+];
+---
+
+<BaseLayout>
+  <Header />
+  <main>
+    <section class="hero" aria-label="XenoDroid">
+      <div class="hero-media" aria-hidden="true">
+        <img
+          src="/hero.jpg"
+          alt=""
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+        />
+        <div class="hero-shade"></div>
+      </div>
+      <div class="container hero-copy">
+        <p class="hero-brand">Xeno<span>Droid</span></p>
+        <h1 class="hero-title">Software that helps people help each other.</h1>
+        <p class="hero-lead">
+          A boutique studio at the frontier of AI-assisted development —
+          building a curated set of customer-facing products where care,
+          judgment, and collaboration stay human.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn btn-ghost" href={CONTACT}>Talk with us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="studio">
+      <div class="container about-grid">
+        <div>
+          <p class="section-kicker">The studio</p>
+          <h2 class="section-title">Boutique by design. Frontier by practice.</h2>
+          <p class="section-lead">
+            XenoDroid builds and ships a small portfolio of serious products —
+            not endless custom one-offs. We use AI-assisted development to move
+            faster without diluting craft, so every product can earn its place
+            in someone’s day-to-day work of looking after others.
+          </p>
+        </div>
+        <aside class="about-aside">
+          What our products share: they strengthen the handoffs between people
+          who already care — legislators and analysts, clinicians and families,
+          teachers and students, parents and children.
+        </aside>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="work">
+      <div class="container">
+        <div class="portfolio-head">
+          <p class="section-kicker">Portfolio</p>
+          <h2 class="section-title">Products in the field</h2>
+          <p class="section-lead">
+            Diverse domains. One through-line: tools that help people help each
+            other.
+          </p>
+        </div>
+        <div class="product-list">
+          {
+            products.map((product, index) => (
+              <article
+                class="product"
+                data-reveal
+                style={`transition-delay: ${index * 70}ms`}
+              >
+                <h3 class="product-name">{product.name}</h3>
+                <div>
+                  <p class="product-blurb">{product.blurb}</p>
+                  <p class="product-meta">{product.meta}</p>
+                </div>
+                {product.href ? (
+                  <a
+                    class="product-link"
+                    href={product.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {product.linkLabel} →
+                  </a>
+                ) : (
+                  <span class="product-link" aria-hidden="true">
+                    In development
+                  </span>
+                )}
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach">
+      <div class="container">
+        <p class="section-kicker">Approach</p>
+        <h2 class="section-title">AI-assisted. Human-accountable.</h2>
+        <p class="section-lead">
+          We build at the edge of what AI can accelerate — and we keep people in
+          the loop wherever judgment, trust, or care is at stake.
+        </p>
+        <div class="approach-points">
+          <div>
+            <h3>Curated, not commodity</h3>
+            <p>
+              A focused portfolio means deep domain immersion and products that
+              can grow for years, not weeks.
+            </p>
+          </div>
+          <div>
+            <h3>Frontier craft</h3>
+            <p>
+              AI-assisted development compresses build cycles so we spend more
+              time on the hard parts: workflows, evidence, and trust.
+            </p>
+          </div>
+          <div>
+            <h3>Mutual help</h3>
+            <p>
+              Every product is a bridge between people who need each other —
+              clearer handoffs, shared truth, gentler presence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-panel">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Building something that helps people help each other?</h2>
+          <p class="section-lead">
+            Tell us about the people you serve. We’ll tell you honestly whether
+            XenoDroid is the right studio for the work.
+          </p>
+        </div>
+        <a class="btn btn-primary" href={CONTACT}>hello@xenodroid.ai</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+
+  <script>
+    const nodes = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-in");
+              observer.unobserve(entry.target);
+            }
+          }
+        },
+        { threshold: 0.2 },
+      );
+      nodes.forEach((node) => observer.observe(node));
+    } else {
+      nodes.forEach((node) => node.classList.add("is-in"));
+    }
+  </script>
+</BaseLayout>
